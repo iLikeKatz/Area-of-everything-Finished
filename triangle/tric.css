@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+
+
+#selectSomethi {
+    background: #000000;
+        border: solid 1px #000000;
+        background: linear-gradient(180deg, #737171 0%, #515050 35%, #262626 100%);
+        border-radius: 8px;
+        color: white;
+        padding: .75rem 1.5rem;
+        width: 100%;
+        font-size: 20px;
+}
+
+option {
+    color: black;
+}
+
+.border {
+    border: solid 1px skyblue;
+}
+
+.img {
+    width: 50%;
+    height: 40%;
+}
+
+@media only screen and (max-width: 414px) {
+    .img{
+        width: 80%;
+        height: 80%;
+    }
+
+    button{
+        width: 170px;
+    }
+}

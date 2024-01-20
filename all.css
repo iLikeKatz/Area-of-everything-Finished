@@ -1,0 +1,62 @@
+input{
+background: rgb(248, 248, 248);
+  border: solid 1px gray;
+  border-radius: auto;
+  padding: 7px;
+  width: 170px;
+  margin-bottom: 5px;
+  color:rgb(77, 76, 76);
+}
+
+body {
+    background-color: skyblue;
+}
+
+nav {
+    background-color: white;
+}
+
+button {
+  border: solid 1px skyblue;
+  background: linear-gradient(180deg, rgb(171, 220, 238) 0%, rgb(170, 235, 244) 35%,rgb(143, 230, 254)) 100%;
+  border-radius: auto;
+  padding: 7px;
+  width: 130px;
+  margin-bottom: 5px;
+  color:rgb(77, 76, 76);
+}
+
+div {
+  font-size: 17px;
+  margin-right: 10px; /* ระยะห่างระหว่างข้อความ */
+  line-height: 2; /* หรือค่าอื่น ๆ ตามที่คุณต้องการ */
+  font-weight: 0.5px;
+}
+
+.container {
+  flex-direction: row; /* เปลี่ยนจาก column เป็น row */
+}
+
+.ans {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  margin-right: 10px; /* ระยะห่างระหว่างข้อความ */
+}
+
+.ans2 {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  margin-right: 10px; /* ระยะห่างระหว่างข้อความ */
+}
+
+.ans3  {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  margin-right: 10px; /* ระยะห่างระหว่างข้อความ */
+}
+
+
+#theans{
+    text-align: left;
+    margin-left: 2%;
+}
