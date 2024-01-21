@@ -5,31 +5,31 @@
     <link rel="stylesheet" href="tric.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Triangle</title>
 </head>
 <body>
     <nav>
         <!-- เลื่อนไปหน้าใหม่ตามค่าที่ถูกเลือก -->
         <select name="select" id="selectSomethi" onchange="navigate()">
-            <option value="/startPage/mf2h.html">Menu</option>
-            <option value="/circle/cirh.html">Circle</option>
-            <option value="/triangle/trih.html">Triangle</option>
-            <option value="/square/sqh.html">Square</option>
-            <option value="/pentagon/penh.html">Pentagon</option>
-            <option value="/hexagon/hexh.html">Hexagon</option>
+            <option value="/startPage/mf2h.html" id="set">Setting</option>
+            <option value="/circle/cirh.html" id="cir">Circle</option>
+            <option value="/triangle/trih.html" id="Tri">Triangle</option>
+            <option value="/square/sqh.html" id="Squ">Square</option>
+            <option value="/pentagon/penh.html" id="Pen">Pentagon</option>
+            <option value="/hexagon/hexh.html" id="Hex">Hexagon</option>
         </select>
     </nav>
 <br>
     <nav class="border">
         <img class="img" src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/surface-area-of-triangular-prism-01-1633936810.png">
-        <h2>Area of triangle</h2>
+        <h2 id="Trihead">Area of triangle</h2>
         <input type="number" placeholder="side line(1) , s1" id="sideL1" value="">
         <input type="number" placeholder="base , s2" id="base" value="">
         <input type="number" placeholder="side line(2) , s3" id="sideL2" value="">
         <br>
         <input type="number" placeholder="height , h" id="height" value="">
         <input type="number" placeholder="height of prism , l" id="hofPri" value="">
-        <button onclick="del(); compTri(); delay();">Submit</button>
+        <button onclick="del(); compTri(); delay();" id="subTri">Submit</button>
         <br>
     <div class="container">
         <div class="ans" id="theans">The answer :</div>
@@ -42,29 +42,7 @@
 <br>
     </nav>
 
-    <script>
-        function navigate() {
-            // ดึงค่าที่ถูกเลือก
-            var selectedValue = document.getElementById("selectSomethi").value;
-
-            // นำค่าที่ถูกเลือกไปยังหน้าใหม่
-            window.location.href = selectedValue;
-
-            // บันทึกค่าที่ถูกเลือกลงใน localStorage
-            localStorage.setItem('selectedValue', selectedValue);
-        }
-
-        // ตรวจสอบค่าที่ถูกเลือกใน localStorage เมื่อหน้าเว็บโหลด
-        window.onload = function() {
-            var selectedValue = localStorage.getItem('selectedValue');
-
-            // ถ้ามีค่าที่ถูกเลือก, ให้เปลี่ยนค่าใน <select>
-            if (selectedValue) {
-                document.getElementById('selectSomethi').value = selectedValue;
-            }
-        } ;
-    </script>
-
     <script src="trij.js"></script>
+    <script src="/all.js"></script>
 </body>
 </html>

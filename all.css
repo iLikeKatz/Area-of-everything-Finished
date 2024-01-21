@@ -1,6 +1,6 @@
 input{
-background: rgb(248, 248, 248);
-  border: solid 1px gray;
+background: rgb(238, 237, 237);
+  border: none;
   border-radius: auto;
   padding: 7px;
   width: 170px;
@@ -56,7 +56,7 @@ div {
 }
 
 
-#theans{
+#theans , #theans2 , #theans3{
     text-align: left;
     margin-left: 2%;
 }

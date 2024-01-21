@@ -27,6 +27,8 @@ function Pi() {
     }
 }
 
+
+
 function compAreaCir() {
     
 
@@ -57,3 +59,4 @@ function del() {
                     ans.style.display = 'none';
                 })
 }
+

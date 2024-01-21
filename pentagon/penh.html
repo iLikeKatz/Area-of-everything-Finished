@@ -5,28 +5,28 @@
     <link rel="stylesheet" href="penc.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pentagon</title>
 </head>
 <body>
     <nav>
         <!-- เลื่อนไปหน้าใหม่ตามค่าที่ถูกเลือก -->
         <select name="select" id="selectSomethi" onchange="navigate()">
-            <option value="/startPage/mf2h.html">Menu</option>
-            <option value="/circle/cirh.html">Circle</option>
-            <option value="/triangle/trih.html">Triangle</option>
-            <option value="/square/sqh.html">Square</option>
-            <option value="/pentagon/penh.html">Pentagon</option>
-            <option value="/hexagon/hexh.html">Hexagon</option>
+            <option value="/startPage/mf2h.html" id="set">Setting</option>
+            <option value="/circle/cirh.html" id="cir">Circle</option>
+            <option value="/triangle/trih.html" id="Tri">Triangle</option>
+            <option value="/square/sqh.html" id="Squ">Square</option>
+            <option value="/pentagon/penh.html" id="Pen">Pentagon</option>
+            <option value="/hexagon/hexh.html" id="Hex">Hexagon</option>
         </select>
     </nav>
 <br>
     <nav class="border">
         <br>
         <img class="img" src="pentagon.jpg">
-        <h2>Area of equilateral pentagon</h2>
+        <h2 id="penHead">Area of equilateral pentagon</h2>
         <input type="number" placeholder="side , A" id="side" value="">
         <input type="number" placeholder="Height of prism" id="heightP" value="">
-        <button onclick="del(); compPen(); delay()">Submit</button>
+        <button onclick="del(); compPen(); delay()" id="subPen">Submit</button>
         <br>
     <div class="container">
         <div class="ans" id="theans">The answer :</div>
@@ -39,29 +39,8 @@
     </div>
     </nav>
 <br>
-    <script>
-        function navigate() {
-            // ดึงค่าที่ถูกเลือก
-            var selectedValue = document.getElementById("selectSomethi").value;
-
-            // นำค่าที่ถูกเลือกไปยังหน้าใหม่
-            window.location.href = selectedValue;
-
-            // บันทึกค่าที่ถูกเลือกลงใน localStorage
-            localStorage.setItem('selectedValue', selectedValue);
-        }
-
-        // ตรวจสอบค่าที่ถูกเลือกใน localStorage เมื่อหน้าเว็บโหลด
-        window.onload = function() {
-            var selectedValue = localStorage.getItem('selectedValue');
-
-            // ถ้ามีค่าที่ถูกเลือก, ให้เปลี่ยนค่าใน <select>
-            if (selectedValue) {
-                document.getElementById('selectSomethi').value = selectedValue;
-            }
-        };
-    </script>
-
+    
     <script src="penj.js"></script>
+    <script src="/all.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 body {
     text-align: center;
-}
+    font-weight: 0.1px;
+    font-size: 25px;
+ }
 
 
 
@@ -19,4 +21,31 @@ option {
     color: black;
 }
 
+button {
+    border: solid 1px #000000;
+        background: linear-gradient(180deg, #737171 0%, #515050 35%, #262626 100%);
+        border-radius: 8px;
+        color: white;
+        padding: 5px;
+        width: 130px;
+}
 
+#joke {
+    border: none;
+    background-color: white;
+    text-decoration: underline black;
+    color: black;
+}
+
+#secret{
+    display: none;
+}
+.secret {
+    text-decoration: none;
+    color: black;
+}
+
+#cool , #trash {
+    width: 150px;
+    height: 150px;
+}

@@ -5,28 +5,28 @@
     <link rel="stylesheet" href="sqc.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>square</title>
 </head>
 <body>
     <nav>
         <!-- เลื่อนไปหน้าใหม่ตามค่าที่ถูกเลือก -->
         <select name="select" id="selectSomethi" onchange="navigate()">
-            <option value="/startPage/mf2h.html">Menu</option>
-            <option value="/circle/cirh.html">Circle</option>
-            <option value="/triangle/trih.html">Triangle</option>
-            <option value="/square/sqh.html">Square</option>
-            <option value="/pentagon/penh.html">Pentagon</option>
-            <option value="/hexagon/hexh.html">Hexagon</option>
+            <option value="/startPage/mf2h.html" id="set">Setting</option>
+            <option value="/circle/cirh.html" id="cir">Circle</option>
+            <option value="/triangle/trih.html" id="Tri">Triangle</option>
+            <option value="/square/sqh.html" id="Squ">Square</option>
+            <option value="/pentagon/penh.html" id="Pen">Pentagon</option>
+            <option value="/hexagon/hexh.html" id="Hex">Hexagon</option>
         </select>
     </nav>
     <br>
 <nav class="border">
     <img class="img" src="https://tse4.mm.bing.net/th?id=OIP.Ke9902Fm3pu_5ADRNi739AAAAA&pid=Api&P=0&h=180">
-    <h2>Area of square and rectangle</h2>
+    <h2 id="sqHead">Area of square and rectangle</h2>
     <input type="number" placeholder="length , x" id="lengthSq" value="">
     <input type="number" placeholder="width , y" id="widthSq" value="">
     <input type="number" placeholder="height" id="heightSq" value="">
-    <button onclick="del(); compAreaSq(); delay()">Submit</button>
+    <button onclick="del(); compAreaSq(); delay()" id="subSq">Submit</button>
     <br>
 <div class="container">
     <div class="ans" id="theans">The answer :</div>
@@ -41,7 +41,7 @@
 <br>
 <nav class="border">
     <img class="img" src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/perimeter-of-a-trapezoid-image-1623172361.png">
-    <h2>Area of trapezoid</h2>
+    <h2 id="trapeHead">Area of trapezoid</h2>
     <input type="number" placeholder="Parallel side(1) , a" id="paral1Tz" value="">
     <input type="number" placeholder="Parallel side(2) , c" id="paral2Tz" value="">
     <input type="number" placeholder="side line(1) , d" id="sideL1Tz" value="">
@@ -49,10 +49,10 @@
     <input type="number" placeholder="side line(2) , b" id="sideL2Tz" value="">
     <input type="number" placeholder="height , h (height of base)" id="heightTz" value="">
     <input type="number" placeholder="Depth (height of prism) " id="hPriTz" value="">
-    <button onclick="del2(); compAreaTz(); delay2();">Submit</button>
+    <button onclick="del2(); compAreaTz(); delay2();" id="subTrape">Submit</button>
     <br>
 <div class="container">
-    <div class="ans2" id="theans">The answer :</div>
+    <div class="ans2" id="theans2">The answer :</div>
     <div id="baseAreaTz" class="ans2"></div>
     <div id="baseAreaTz*2" class="ans2"></div>
     <div id="sideAreaTz" class="ans2"></div>
@@ -64,14 +64,14 @@
 <br>
 <nav class="border">
     <img class="img" src="https://i2.wp.com/z-optics.com/wp-content/uploads/Rhomboid-Prism2.jpg?fit=600%2C600&ssl=1">
-    <h2>Parallelogram and rhombus</h2>
+    <h2 id="parHead">Parallelogram and rhombus</h2>
     <input type="number" placeholder="base , B" id="baseParal" value="">
     <input type="number" placeholder="height , A" id="heightParal" value="">
     <input type="number" placeholder="height of prism , c" id="PriH" value="">
-    <button onclick="del3(); compParal(); delay3()">Submit</button>
+    <button onclick="del3(); compParal(); delay3()" id="subPar">Submit</button>
     <br>
 <div class="container">
-    <div class="ans3" id="theans">The answer :</div>
+    <div class="ans3" id="theans3">The answer :</div>
     <div id="baseAreaPr" class="ans3"></div>
     <div id="baseAreaPr*2" class="ans3"></div>
     <div id="sideAreaPr" class="ans3"></div>
@@ -81,30 +81,7 @@
     <br>
 </nav>
 
-
-    <script>
-        function navigate() {
-            // ดึงค่าที่ถูกเลือก
-            var selectedValue = document.getElementById("selectSomethi").value;
-
-            // นำค่าที่ถูกเลือกไปยังหน้าใหม่
-            window.location.href = selectedValue;
-
-            // บันทึกค่าที่ถูกเลือกลงใน localStorage
-            localStorage.setItem('selectedValue', selectedValue);
-        }
-
-        // ตรวจสอบค่าที่ถูกเลือกใน localStorage เมื่อหน้าเว็บโหลด
-        window.onload = function() {
-            var selectedValue = localStorage.getItem('selectedValue');
-
-            // ถ้ามีค่าที่ถูกเลือก, ให้เปลี่ยนค่าใน <select>
-            if (selectedValue) {
-                document.getElementById('selectSomethi').value = selectedValue;
-            }
-        };
-    </script>
-
     <script src="sqj.js"></script>
+    <script src="/all.js"></script>
 </body>
 </html>
